@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PYCBIT</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    <style type="text/css">
+       
+       .card { 
+         
+          background-color: white;
+          font-size: 20px;
+          margin:20px;
+          padding: 20px;
+          width:100%;
+          height:50%;
+          max-width: 20%;
+          text-align: center;
+        
+
+       } 
+
+       .card:hover{
+        
+         margin-top:-1%;
+       }	
+
+       .box {
+          
+         width:100%;
+         max-width:100%;
+         padding:0%;
+         opacity: 0.6;
+         height: 700px;
+         color:#555;
+         background-color: black;
+
+       }
+
+       .about{
+       	height:100%;
+       	width:70%;
+       }
+
+       @media (max-width:250px) {
+      
+       .screenin {
+          
+          height:25%; 
+          width:100%;
+      
+        }
+ 
+       }
+
+       
+
+    </style>
+
+</head>
+
+<body>
+  
+   <div >
+	<nav class="navbar navbar-inverse">
+     <div class="container-fluid">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+       </button>
+       <a class="navbar-brand" href="#">PYCBIT</a>
+     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('index', _anchor='about') }}">About pycbit</a></li>
+        <li><a href="{{ url_for('index', _anchor='events') }}">Events</a></li> 
+        <li><a href="{{ url_for('index', _anchor='contact') }}">contact us</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('signup') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+<section>
+  <div  style="margin-top:-1.5%;margin-bottom:0px;">  
+    <img class="box" src=" {{ url_for('static',filename='djangoteam.jpeg') }}" alt="image not found" />
+</div>
+</section>
+
+
+
+<div>   
+   <div class="row" id="about">
+       <div class="col-lg-6" style="padding-left:20%;padding-top: 5%;margin:auto;height:20%;"> <img class="about" src=" {{ url_for('static',filename='logo.png') }}" alt="image not found" /></div>
+       <div class="col-lg-6 " style="padding-left:20%;padding-top: 5%;margin: auto;"><h1>About us</h1></div>
+   </div>
+</div>
+
+<div class="row" id="events" style="padding:10%;background-color: black;width:100%;margin:0px;margin-top:5%;">
+ 
+   <div style="text-align: center;color:springgreen"><h3>Upcoming Events</h3><hr /></div>
+
+   <div class=" col-md-4  card "><div> <img class="about" src=" {{ url_for('static',filename='logo.png') }}" alt="image not found" /></div><hr /><div> <a href="#" class="btn btn-primary" role="button">Enroll</a></div></div>
+   <div class=" col-md-4 card " ><div> <img class="about" src=" {{ url_for('static',filename='logo.png') }}" alt="image not found" /></div><hr /><div> <a href="#" class="btn btn-primary" role="button">Enroll</a></div></div>
+   <div class=" col-md-4 card"><div> <img class="about" src=" {{ url_for('static',filename='logo.png') }}" alt="image not found" /></div><hr /><div> <a href="#" class="btn btn-primary" role="button">Enroll</a></div></div>
+   <div class=" col-md-4 card"><div> <img class="about" src=" {{ url_for('static',filename='logo.png') }}" alt="image not found" /></div><hr /><div> <a href="#" class="btn btn-primary" role="button">Enroll</a></div></div>
+  
+   <!--
+     {% for i in range(4) %}
+
+   <div class=" col-md-4  card "><div> <img class="about" src=" {{ url_for('static',filename='logo.png') }}" alt="image not found" /></div><hr /><div> button</div></div>
+
+   {% endfor %} -->   
+            
+</div>
+
+<div class="row" id="contact" style="padding: 10% 5%;background-color: black;opacity:0.8;color:white;">
+ 
+  <div class="col-md-4"><h1>PYCBIT</h1></div>
+  <div class="col-md-8">
+  	 <div><h3><small>Ocean Park Rd, Kokapet Village, Gandipet Mandal, Rangareddy District, Hyderabad, Telangana 500075</small></h3></div>
+     <div><h3><small>cbitosc@gmail.com</small></h3></div>
+  </div>   
+ 
+
+
+</div>
+</body>
+</html>
